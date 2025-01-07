@@ -9,7 +9,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
   const progressWidth = (progress / 100) * 191; // 191px is the full width of the progress bar
 
   return (
-    <div className="w-[191px] h-4 relative">
+    <div className="w-[191px] h-4 relative mt-1">
       {/* Background of the progress bar */}
       <div className="w-[191px] h-1 left-0 top-[6px] absolute">
         <div className="w-[191px] h-1 left-0 top-0 absolute bg-[#4a4a4a] rounded-[100px]" />

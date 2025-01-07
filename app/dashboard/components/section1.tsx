@@ -41,8 +41,8 @@ const cardData: CardData[] = [
       >
         <rect width="36" height="36" rx="8" fill="#1C2A00" />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M10.5922 18.612C10.8074 19.3642 11.3872 19.9432 12.5459 21.102L13.9184 22.4745C15.9359 24.4927 16.9439 25.5 18.1964 25.5C19.4497 25.5 20.4577 24.492 22.4744 22.4752C24.4919 20.4577 25.4999 19.4497 25.4999 18.1965C25.4999 16.944 24.4919 15.9352 22.4752 13.9185L21.1027 12.546C19.9432 11.3872 19.3642 10.8075 18.6119 10.5922C17.8597 10.3762 17.0609 10.5607 15.4642 10.9297L14.5432 11.142C13.1992 11.4517 12.5272 11.607 12.0667 12.0667C11.6062 12.5265 11.4524 13.2 11.1419 14.5432L10.9289 15.4642C10.5607 17.0617 10.3769 17.8597 10.5922 18.612ZM16.5914 14.4532C16.7361 14.5928 16.8515 14.7597 16.9309 14.9443C17.0104 15.1289 17.0522 15.3275 17.054 15.5284C17.0558 15.7294 17.0176 15.9287 16.9415 16.1147C16.8655 16.3007 16.7531 16.4697 16.611 16.6118C16.4689 16.7539 16.2999 16.8663 16.1139 16.9423C15.9279 17.0184 15.7286 17.0567 15.5276 17.0548C15.3267 17.053 15.1281 17.0112 14.9435 16.9317C14.7589 16.8523 14.5919 16.7369 14.4524 16.5922C14.1772 16.3069 14.0251 15.9249 14.0286 15.5284C14.0322 15.132 14.1913 14.7528 14.4717 14.4725C14.752 14.1921 15.1312 14.033 15.5276 14.0295C15.9241 14.0259 16.3061 14.178 16.5914 14.4532ZM23.2874 18.0382L18.0532 23.2732C17.9471 23.3757 17.8049 23.4323 17.6575 23.4309C17.51 23.4296 17.3689 23.3704 17.2647 23.266C17.1604 23.1617 17.1013 23.0206 17.1001 22.8731C17.0989 22.7256 17.1557 22.5835 17.2582 22.4775L22.4917 17.2425C22.5972 17.137 22.7403 17.0777 22.8896 17.0777C23.0388 17.0777 23.1819 17.137 23.2874 17.2425C23.393 17.348 23.4522 17.4911 23.4522 17.6404C23.4522 17.7896 23.393 17.9327 23.2874 18.0382Z"
           fill="#A7FC00"
         />
@@ -88,8 +88,8 @@ const Card: React.FC = () => {
         <div
           key={index}
           className={`w-[231px] ${
-            card.progress ? "h-[165px]" : "h-[135px]"
-          } px-5 py-4 bg-[#181818] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] flex-col justify-start items-start gap-6 inline-flex overflow-hidden`}
+            card.progress ? "h-[135px]" : "h-[135px]"
+          } px-5 py-4 bg-[#181818] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] flex-col justify-start items-start  inline-flex overflow-hidden`}
         >
           <div className="self-stretch justify-between items-center inline-flex">
             <div className="text-center text-white text-base font-normal font-['Figtree']">
@@ -99,23 +99,17 @@ const Card: React.FC = () => {
               {card.icon}
             </div>
           </div>
-          <div className="self-stretch justify-start items-center gap-3 inline-flex">
-            <div className="text-center text-white text-[28px] font-medium font-['Figtree']">
+            <div
+              className={`${
+                index === 3 ? "text-[24px" : "text-[28px]"
+              } text-center text-white  font-medium mt-6 `}
+            >
               {card.count}
-            </div>
+           
           </div>
-                  {index == 3 && <ProgressBar progress={20} />}
+          {index == 3 && <ProgressBar progress={20} />}
 
-          {index==3 && (
-            <div className="self-stretch h-[59px] flex-col justify-start items-start gap-3.5 flex">
-              {/* <div className="self-stretch justify-start items-center gap-3 inline-flex">
-                <div className="text-center text-white text-2xl font-medium font-['Figtree']">
-                  {card.progress}%
-                </div>
-              </div> */}
-              <ProgressBar progress={20} />
-            </div>
-          )}
+        
         </div>
       ))}
     </div>
