@@ -1,9 +1,7 @@
 
 import React from "react";
 import { PlusIcon } from "../components/iconsSVG";
-import Section1 from "./components/section1";
 import Card from "./components/section1";
-import ProgressBar from "./components/ProgressBar";
 
 const Dashboard = () => {
     return (
