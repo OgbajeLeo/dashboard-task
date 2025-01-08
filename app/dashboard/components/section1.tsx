@@ -84,8 +84,8 @@ const cardData: CardData[] = [
 
 const Card: React.FC = () => {
     return (
-      <div className="grid grid-cols-2 grid-flow-row w-full slide-up my-10 place-self-stretch">
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-2 gap-4 w-fit ">
+      <div className="flex items-center gap-4 w-full slide-up my-10 ">
+        <div className="flex items-center justify-center flex-wrap gap-4 max-w-[478px] w-full ">
           {cardData.map((card, index) => (
             <div
               key={index}
@@ -113,7 +113,7 @@ const Card: React.FC = () => {
           ))}
         </div>
 
-        <div className="w-full h-full grid place-self-stretch grid-flow-col">
+        <div className="w-full h-full">
           <FundraisingChart />
         </div>
       </div>

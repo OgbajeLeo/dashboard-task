@@ -36,10 +36,10 @@ const FundraisingChart = () => {
         label: "Cityscape L",
         data:
           selectedPeriod === "14d"
-            ? [1500, 0, 2000]
+            ? [1000, 500, 1500]
             : selectedPeriod === "7d"
-            ? [200, 500, 1200]
-            : [1200, 1000, 3000], // Example for last month
+            ? [500, 1500, 1000]
+            : [2000, 0, 3000], // Example for last month
         borderColor: "#683fea",
         backgroundColor: "rgba(104, 63, 234, 0.2)",
         borderWidth: 1,
@@ -49,10 +49,10 @@ const FundraisingChart = () => {
         label: "Truffle Ski",
         data:
           selectedPeriod === "14d"
-            ? [2000, 600, 1600]
+            ? [500, 1500, 1000]
             : selectedPeriod === "7d"
-            ? [500, 700, 1500]
-            : [1500, 1200, 2500], // Example for last month
+            ? [1000, 2000, 1000]
+            : [1000, 1000, 2000], // Example for last month
         borderColor: "#a7fc00",
         backgroundColor: "rgba(167, 252, 0, 0.2)",
         borderWidth: 1,
@@ -62,10 +62,10 @@ const FundraisingChart = () => {
         label: "Mawi",
         data:
           selectedPeriod === "14d"
-            ? [1000, 2000, 1000]
+            ? [2000, 0, 1000]
             : selectedPeriod === "7d"
-            ? [400, 800, 1000]
-            : [1000, 1500, 2000], // Example for last month
+            ? [1000, 2000, 2000]
+            : [1000, 2000, 2000], // Example for last month
         borderColor: "#fc7900",
         backgroundColor: "rgba(252, 121, 0, 0.2)",
         borderWidth: 1,
@@ -133,9 +133,9 @@ const FundraisingChart = () => {
   };
 
   return (
-    <div className="w-full bg-[#181818] rounded-xl border border-gray-800 p-4">
+    <div className="w-full bg-[#181818] rounded-xl p-4">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-white text-lg">Funds raised</h2>
+        <h2 className="text-white font-normal">Funds raised</h2>
         <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -193,7 +193,7 @@ const FundraisingChart = () => {
       </div>
 
       <div className="mb-8 flex gap-4 items-center justify-between">
-        <div className="text-2xl font-medium text-white mb-4">$3,520.50</div>
+        <div className="text-[28px] font-medium text-white mb-4">$3,520.50</div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-3 h-0.5 bg-[#683fea]" />
