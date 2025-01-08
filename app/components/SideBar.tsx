@@ -98,7 +98,7 @@ const Sidebar = ({ children }: SidebarProps) => {
 
       {/* Sidebar Header Section */}
       <div className="fixed left-[237px] w-[calc(100%-237px)] h-[92px] pr-8 py-6 bg-[#030500] flex justify-between items-center">
-        <div className="w-[298px] h-11 pl-6 ml-10 bg-[#181818] rounded-[100px] border flex items-center gap-2.5">
+        <div className="w-[298px] h-11 pl-6 ml-10 bg-[#181818] rounded-[100px] flex items-center gap-2.5">
           <SearchIcon />
           <div className="text-[#838383] text-base font-normal">Search</div>
         </div>
@@ -112,7 +112,9 @@ const Sidebar = ({ children }: SidebarProps) => {
       </div>
 
       {/* Main Content Section (Children will be rendered here) */}
-      <div className="flex-1 mt-[104px] ml-10 mr-8">{children}</div>
+      <div className="flex-1 h-[calc(100%-104px)] no-scrollbar  overflow-y-auto mt-[104px] ml-10 mr-8">
+        {children}
+      </div>
     </div>
   );
 };

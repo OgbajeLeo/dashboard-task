@@ -83,7 +83,7 @@ const cardData: CardData[] = [
 
 const Card: React.FC = () => {
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-2 gap-4 mt-10 w-fit">
+    <div className="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-2 gap-4 my-10 w-fit slide-up">
       {cardData.map((card, index) => (
         <div
           key={index}
@@ -92,24 +92,21 @@ const Card: React.FC = () => {
           } px-5 py-4 bg-[#181818] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] flex-col justify-start items-start  inline-flex overflow-hidden`}
         >
           <div className="self-stretch justify-between items-center inline-flex">
-            <div className="text-center text-white text-base font-normal font-['Figtree']">
+            <div className="text-center text-white text-base font-normal">
               {card.title}
             </div>
             <div className="w-9 h-9 bg-[#1b2a00] rounded-lg justify-center items-center flex">
               {card.icon}
             </div>
           </div>
-            <div
-              className={`${
-                index === 3 ? "text-[24px" : "text-[28px]"
-              } text-center text-white  font-medium mt-6 `}
-            >
-              {card.count}
-           
+          <div
+            className={`${
+              index === 3 ? "text-[24px] mt-3" : "text-[28px] mt-[30px]"
+            } text-center text-white  font-medium`}
+          >
+            {card.count}
           </div>
           {index == 3 && <ProgressBar progress={20} />}
-
-        
         </div>
       ))}
     </div>

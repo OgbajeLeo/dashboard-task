@@ -1,0 +1,139 @@
+import React from "react";
+import g1 from '@/public/g1.png'
+import g2 from '@/public/g2.png'
+import g3 from '@/public/g3.png'
+import Image from "next/image";
+
+const ProjectListPage: React.FC = () => {
+  const projects = [
+    {
+      name: "Cityscape Living",
+      category: "Real estate",
+      dateListed: "02-07-2024",
+      fundingGoal: "$10,000",
+      fundingDeadline: "02-12-2024",
+      fundingProgress: 25,
+      status: "Funding open",
+      statusColor: "#29b358",
+          progressColor: "#a7fc00",
+      image: g1,
+    },
+    {
+      name: "Mawi",
+      category: "Entertainment",
+      dateListed: "02-05-2024",
+      fundingGoal: "$20,000",
+      fundingDeadline: "31-12-2024",
+      fundingProgress: 80,
+      status: "In progress",
+      statusColor: "#ea7e1a",
+        progressColor: "#a7fc00",
+      image: g3,
+    },
+    {
+      name: "Truffle Skin",
+      category: "Beauty",
+      dateListed: "01-01-2024",
+      fundingGoal: "$30,000",
+      fundingDeadline: "01-09-2024",
+      fundingProgress: 0,
+      status: "Failed to fund",
+      statusColor: "#ba2543",
+        progressColor: "#a7fc00",
+      image: g2,
+    },
+  ];
+
+  return (
+    <div className="w-full bg-[#181818] rounded-xl mb-20 p-5 pb-[35px] mt-10">
+      <div className="flex items-center justify-between h-full mb-2">
+        <div className="text-white text-2xl font-medium ">Listed projects</div>
+        <div className="border border-[#4A4A4A] rounded-lg text-white text-[13px] py-2 px-3">
+          View report
+        </div>
+      </div>
+
+      <table className="w-full text-left table-auto border-collapse">
+        <thead className="py-2.5 h-[51px]">
+          <tr className="text-[#b3b4b3] text-sm font-[400] border-gray-700 py-2.5">
+            <th className="py-2 px-4">Project</th>
+            <th className="py-2 px-4">Status</th>
+            <th className="py-2 px-4">Date Listed</th>
+            <th className="py-2 px-4">Funding Goal</th>
+            <th className="py-2 px-4">Funding Progress</th>
+            <th className="py-2 px-4">Funding Deadline</th>
+          </tr>
+        </thead>
+              <tbody className="space-y-2 w-full rounded-2xl ">
+                 
+          {projects.map((project, index) => (
+            <tr
+              key={index}
+              className={`bg-[#141414] space-y-2  !rounded-2xl w-full ${
+                index % 2 === 0 ? "mt-2" : ""
+              }`}
+            >
+              {/* Project Name and Category */}
+              <td className="py-3 px-4 flex items-center gap-3 mb-2 space-y-2 ">
+                <Image
+                  className="w-10 h-10 rounded-full"
+                  src={project.image}
+                  alt={project.name}
+                />
+                <div>
+                  <div className="text-white text-base font-medium">
+                    {project.name}
+                  </div>
+                  <div className="text-[#838383] text-[15px]">
+                    {project.category}
+                  </div>
+                </div>
+              </td>
+              {/* Status */}
+              <td className="py-3 px-4">
+                <span
+                  className="px-3 py-1 rounded-full text-sm"
+                  style={{
+                    color: project.statusColor,
+                    backgroundColor: `${project.statusColor}10`,
+                    border: `1px solid ${project.statusColor}25`,
+                  }}
+                >
+                  {project.status}
+                </span>
+              </td>
+              {/* Date Listed */}
+              <td className="py-3 px-4 text-white">{project.dateListed}</td>
+              {/* Funding Goal */}
+              <td className="py-3 px-4 text-white">{project.fundingGoal}</td>
+              {/* Funding Progress */}
+              <td className="py-3 px-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-[156px] h-[5px] bg-[#4a4a4a] rounded-full relative">
+                    <div
+                      className="h-full rounded-full"
+                      style={{
+                        width: `${project.fundingProgress}%`,
+                        backgroundColor: project.progressColor,
+                      }}
+                    ></div>
+                  </div>
+                  <span className="text-[#616161] text-[15px]">
+                    {project.fundingProgress}%
+                  </span>
+                </div>
+              </td>
+              {/* Funding Deadline */}
+              <td className="py-3 px-4 text-white">
+                {project.fundingDeadline}
+              </td>
+            </tr>
+          ))}
+                     
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default ProjectListPage;
