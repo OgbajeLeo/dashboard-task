@@ -45,7 +45,7 @@ const ProjectListPage: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-[#181818] rounded-xl mb-20 p-5 pb-[35px] mt-10">
+    <div className="w-full bg-[#181818] rounded-xl mb-20 p-5 pb-[35px] mt-10 slide-up">
       <div className="flex items-center justify-between h-full mb-2">
         <div className="text-white text-2xl font-medium ">Listed projects</div>
         <div className="border border-[#4A4A4A] rounded-lg text-white text-[13px] py-2 px-3">
@@ -55,7 +55,7 @@ const ProjectListPage: React.FC = () => {
 
       <table className="w-full text-left table-auto border-collapse">
         <thead className="py-2.5 h-[51px]">
-          <tr className="text-[#b3b4b3] text-sm font-[400] border-gray-700 py-2.5">
+          <tr className="text-[#b3b4b3] text-sm font-normal py-2.5">
             <th className="py-2 px-4">Project</th>
             <th className="py-2 px-4">Status</th>
             <th className="py-2 px-4">Date Listed</th>
@@ -64,8 +64,7 @@ const ProjectListPage: React.FC = () => {
             <th className="py-2 px-4">Funding Deadline</th>
           </tr>
         </thead>
-              <tbody className="space-y-2 w-full rounded-2xl ">
-                 
+        <tbody className="space-y-2 w-full rounded-2xl ">
           {projects.map((project, index) => (
             <tr
               key={index}
@@ -129,7 +128,6 @@ const ProjectListPage: React.FC = () => {
               </td>
             </tr>
           ))}
-                     
         </tbody>
       </table>
     </div>
