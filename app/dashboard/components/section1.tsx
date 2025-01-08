@@ -94,7 +94,7 @@ const Card: React.FC = () => {
               } px-5 py-4 bg-[#181818] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] flex-col justify-start items-start  inline-flex overflow-hidden`}
             >
               <div className="self-stretch justify-between items-center inline-flex">
-                <div className="text-center text-white text-base font-normal">
+                <div className="text-center text-white text-base font-normal py-2">
                   {card.title}
                 </div>
                 <div className="w-9 h-9 bg-[#1b2a00] rounded-lg justify-center items-center flex">
@@ -103,7 +103,7 @@ const Card: React.FC = () => {
               </div>
               <div
                 className={`${
-                  index === 3 ? "text-[24px] mt-3" : "text-[28px] mt-[30px]"
+                  index === 3 ? "text-[24px] mt-3" : "text-[28px] mt-[30px] mb-3"
                 } text-center text-white  font-medium`}
               >
                 {card.count}

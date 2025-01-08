@@ -4,7 +4,7 @@ interface VoucherData {
   title: string;
   count: string;
   bgColor: string;
-   icon?: React.ReactNode;
+  icon?: React.ReactNode;
 }
 
 const data: VoucherData[] = [
@@ -25,7 +25,7 @@ const data: VoucherData[] = [
           d="M11.25 25.5H26.25"
           stroke="#A7FC00"
           strokeWidth="1.125"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -152,17 +152,14 @@ const data: VoucherData[] = [
   },
 ];
 
-const VoucherCard: React.FC<VoucherData> = ({ title, count,icon }) => {
+const VoucherCard: React.FC<VoucherData> = ({ title, count, icon }) => {
   return (
     <div className="grow shrink basis-0 h-[126px] px-5 py-4 bg-[#181818] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] my-10 flex-col justify-start items-start gap-6 flex">
       <div className="self-stretch justify-between items-center inline-flex">
         <div className="text-center text-white text-base font-normal ">
           {title}
         </div>
-        <div
-          className="w-9 h-9 rounded-lg justify-center items-center flex"
-         
-        >
+        <div className="w-9 h-9 rounded-lg justify-center items-center flex">
           {icon}
         </div>
       </div>

@@ -32,15 +32,12 @@ const VoucherHolders = () => {
   ];
 
   return (
-    <div className="w-full my-20 p-5 bg-[#181818] rounded-xl ">
-      <div className=" justify-between items-center flex w-full my-5">
-        <div className=" text-white text-2xl font-medium ">
-          Voucher holders
-        </div>
-          <div className="text-[#a7fc00] text-sm font-normal  leading-normal">
-            See all
-          </div>
-   
+    <div className="w-full mt-14 p-5 bg-[#181818] rounded-xl slide-up">
+      <div className=" justify-between items-center flex w-full mb-5">
+        <div className=" text-white text-2xl font-medium ">Voucher holders</div>
+        <button className="text-[#a7fc00] text-sm font-normal  leading-normal hover:underline ">
+          See all
+        </button>
       </div>
       <div className="w-full justify-start items-center gap-4 flex overflow-hidden">
         {voucherHolders.map((holder) => (
@@ -55,7 +52,8 @@ const VoucherHolders = () => {
             />
             <div className="w-full justify-start items-start inline-flex overflow-hidden">
               <div className="grow relative shrink basis-0 w-full py-2.5 bg-white rounded-bl-2xl rounded-br-2xl border-t flex-col justify-start items-center gap-2.5 inline-flex overflow-hidden">
-              <div className="w-8 h-8 bg-[#030500] rounded-full absolute -left-[20px] top-8" />
+                <div className="w-8 h-8 bg-[#030500] absolute -right-[20px] top-8 rounded-full" />
+                <div className="w-8 h-8 bg-[#030500] rounded-full absolute -left-[20px] top-8" />
                 <div className="w-full text-center text-[#1d1d1d] text-lg font-medium  leading-[30px]">
                   {holder.name}
                 </div>
@@ -77,7 +75,6 @@ const VoucherHolders = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="w-8 h-8 bg-[#030500] rounded-full" /> */}
             </div>
           </div>
         ))}

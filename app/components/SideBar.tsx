@@ -64,7 +64,7 @@ const Sidebar = ({ children }: SidebarProps) => {
                 className={`flex items-center py-3 px-4 cursor-pointer ${
                   path === item.route
                     ? "bg-[#212121] text-white border-l-2 border-[#a7fc00]"
-                    : "hover:bg-[#1e1e1e]"
+                    : "hover:bg-[#1e1e1e] hover:scale-105 hover:opacity-90 transition-all ease-in-out duration-200"
                 }`}
                 onClick={() => router.push(item.route)}
               >
@@ -100,18 +100,22 @@ const Sidebar = ({ children }: SidebarProps) => {
       <div className="fixed left-[237px] w-[calc(100%-237px)] h-[92px] pr-8 py-6 bg-[#030500] flex justify-between items-center">
         <div className="w-[298px] h-11 pl-6 ml-10 bg-[#181818] rounded-[100px] flex items-center gap-2.5">
           <SearchIcon />
-          <div className="text-[#838383] text-base font-normal">Search</div>
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-full h-full bg-transparent text-[#838383] pr-3 text-base font-normal outline-none placeholder-[#838383]"
+          />
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10 p-[9px] bg-[#181818] rounded-[100px] flex justify-center items-center">
+          <div className="w-10 h-10 p-[9px] bg-[#181818] rounded-[100px] flex justify-center items-center hover:scale-105 cursor-pointer">
             <BellIcon />
           </div>
           <Image src={profile} alt="profile" width={40} height={40} />
         </div>
       </div>
 
-      {/* Main Content Section (Children will be rendered here) */}
+      {/* Main Content  */}
       <div className="flex-1 h-[calc(100%-104px)] no-scrollbar  overflow-y-auto mt-[104px] ml-10 mr-8">
         {children}
       </div>

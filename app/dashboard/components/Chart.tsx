@@ -101,8 +101,9 @@ const FundraisingChart = () => {
         ticks: {
           color: "#a5a5a5",
           font: {
-            size: 12,
+            size: 14,
           },
+          padding: 20,
         },
         grid: {
           display: false,
@@ -112,7 +113,7 @@ const FundraisingChart = () => {
         ticks: {
           color: "#a5a5a5",
           font: {
-            size: 12,
+            size: 14,
           },
           // Adjusted callback to match expected types
           callback: function (tickValue: string | number) {
@@ -168,7 +169,7 @@ const FundraisingChart = () => {
             </svg>
           </button>
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 bg-[#2c2c2c] rounded-lg shadow-lg w-48">
+            <div className="absolute right-0 mt-2 bg-[#2c2c2c] rounded-lg shadow-lg w-48 ">
               <button
                 onClick={() => handlePeriodChange("14d")}
                 className="block px-4 py-2 text-white text-sm w-full text-left"
@@ -193,7 +194,7 @@ const FundraisingChart = () => {
       </div>
 
       <div className="mb-8 flex gap-4 items-center justify-between">
-        <div className="text-[28px] font-medium text-white mb-4">$3,520.50</div>
+        <div className="text-[28px] font-medium text-white">$3,520.50</div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-3 h-0.5 bg-[#683fea]" />
@@ -210,7 +211,7 @@ const FundraisingChart = () => {
         </div>
       </div>
 
-      <div className="h-[120px] w-full">
+      <div className="h-[130px] w-full">
         <Line data={data} options={options} />
       </div>
     </div>

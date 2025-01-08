@@ -48,7 +48,7 @@ const ProjectListPage: React.FC = () => {
     <div className="w-full bg-[#181818] rounded-xl mb-20 p-5 pb-[35px] mt-10 slide-up">
       <div className="flex items-center justify-between h-full mb-2">
         <div className="text-white text-2xl font-medium ">Listed projects</div>
-        <div className="border border-[#4A4A4A] rounded-lg text-white text-[13px] py-2 px-3">
+        <div className="border border-[#4A4A4A] rounded-lg text-white text-[13px] py-2 px-3 cursor-pointer hover:scale-105">
           View report
         </div>
       </div>
@@ -56,24 +56,25 @@ const ProjectListPage: React.FC = () => {
       <table className="w-full text-left table-auto border-collapse">
         <thead className="py-2.5 h-[51px]">
           <tr className="text-[#b3b4b3] text-sm font-normal py-2.5">
-            <th className="py-2 px-4">Project</th>
-            <th className="py-2 px-4">Status</th>
-            <th className="py-2 px-4">Date Listed</th>
-            <th className="py-2 px-4">Funding Goal</th>
-            <th className="py-2 px-4">Funding Progress</th>
-            <th className="py-2 px-4">Funding Deadline</th>
+            <th className="py-2 px-4 font-normal ">Project</th>
+            <th className="py-2 px-4 font-normal ">Status</th>
+            <th className="py-2 px-4 font-normal ">Date Listed</th>
+            <th className="py-2 px-4 font-normal ">Funding Goal</th>
+            <th className="py-2 px-4 font-normal ">Funding Progress</th>
+            <th className="py-2 px-4 font-normal ">Funding Deadline</th>
           </tr>
         </thead>
         <tbody className="space-y-2 w-full rounded-2xl ">
           {projects.map((project, index) => (
             <tr
               key={index}
-              className={`bg-[#141414] space-y-2  !rounded-2xl w-full ${
-                index % 2 === 0 ? "mt-2" : ""
+              style={{ borderRadius: 20 }}
+              className={`bg-[#141414] space-y-2  border-b-[8px] border-[#181818] !rounded-2xl w-full ${
+                index % 2 === 0 ? " " : ""
               }`}
             >
               {/* Project Name and Category */}
-              <td className="py-3 px-4 flex items-center gap-3 mb-2 space-y-2 ">
+              <td className="py-3 px-4 flex items-center gap-3 mb-2 space-y-2 rounded-2xl">
                 <Image
                   className="w-10 h-10 rounded-full"
                   src={project.image}
