@@ -12,7 +12,7 @@ const figTree = Figtree({
 
 export const metadata: Metadata = {
   title: "Frontend Task",
-  description: "Frontend task to TBS",
+  description: "Frontend task to TBS by leonardaromeh@gmail.com",
 };
 
 export default function RootLayout({

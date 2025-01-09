@@ -117,7 +117,13 @@ const VoucherCard = ({ voucher }: { voucher: Voucher }) => {
           </div>
         </button>
         <div className="w-8 h-8 justify-center items-center flex">
-          <div className="w-8 h-8 relative"></div>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 29.3333H20C26.6667 29.3333 29.3333 26.6666 29.3333 20V12C29.3333 5.33329 26.6667 2.66663 20 2.66663H12C5.33334 2.66663 2.66667 5.33329 2.66667 12V20C2.66667 26.6666 5.33334 29.3333 12 29.3333Z" stroke="#A7FC00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M21.3286 16H21.3406" stroke="#A7FC00" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M15.994 16H16.006" stroke="#A7FC00" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10.6593 16H10.6713" stroke="#A7FC00" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
         </div>
       </div>
     </div>
