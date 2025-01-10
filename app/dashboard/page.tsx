@@ -2,7 +2,7 @@
 import React from "react";
 import { PlusIcon } from "../components/iconsSVG";
 import Card from "./components/section1";
-import ProjectListPage from "./components/section2";
+import Projects from "./components/section2";
 
 const Dashboard = () => {
     return (
@@ -28,7 +28,7 @@ const Dashboard = () => {
         </div>
 
         <Card />
-        <ProjectListPage />
+        <Projects />
      
         </div>
     );

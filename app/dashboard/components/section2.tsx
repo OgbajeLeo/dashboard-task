@@ -69,12 +69,12 @@ const ProjectListPage: React.FC = () => {
             <tr
               key={index}
               style={{ borderRadius: 20 }}
-              className={`bg-[#141414] space-y-2  border-b-[8px] border-[#181818] !rounded-2xl w-full ${
-                index % 2 === 0 ? " " : ""
+              className={` space-y-2  border-b-[8px] border-[#181818] w-full ${
+                index % 2 === 0 ? "" : ""
               }`}
             >
               {/* Project Name and Category */}
-              <td className="py-3 px-4 flex items-center gap-3 mb-2 space-y-2 rounded-2xl">
+              <td className="bg-[#141414] py-[18px] px-4 flex items-center gap-3 rounded-l-2xl z-40">
                 <Image
                   className="w-10 h-10 rounded-full"
                   src={project.image}
@@ -90,7 +90,7 @@ const ProjectListPage: React.FC = () => {
                 </div>
               </td>
               {/* Status */}
-              <td className="py-3 px-4">
+              <td className="py-3 px-4 bg-[#141414]">
                 <span
                   className="px-3 py-1 rounded-full text-sm"
                   style={{
@@ -103,11 +103,15 @@ const ProjectListPage: React.FC = () => {
                 </span>
               </td>
               {/* Date Listed */}
-              <td className="py-3 px-4 text-white">{project.dateListed}</td>
+              <td className="py-3 px-4 bg-[#141414] text-white">
+                {project.dateListed}
+              </td>
               {/* Funding Goal */}
-              <td className="py-3 px-4 text-white">{project.fundingGoal}</td>
+              <td className="py-3 px-4 bg-[#141414] text-white">
+                {project.fundingGoal}
+              </td>
               {/* Funding Progress */}
-              <td className="py-3 px-4">
+              <td className="py-3 px-4 bg-[#141414]">
                 <div className="flex items-center gap-3">
                   <div className="w-[156px] h-[5px] bg-[#4a4a4a] rounded-full relative">
                     <div
@@ -124,7 +128,7 @@ const ProjectListPage: React.FC = () => {
                 </div>
               </td>
               {/* Funding Deadline */}
-              <td className="py-3 px-4 text-white">
+              <td className="py-3 px-4 text-white rounded-r-2xl bg-[#141414]">
                 {project.fundingDeadline}
               </td>
             </tr>

@@ -133,7 +133,7 @@ const VoucherCard = ({ voucher }: { voucher: Voucher }) => {
 const PublishedVoucher = () => {
   return (
     <div className="w-full p-5 bg-[#181818] rounded-xl mt-[18px] slide-up">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-5">
         <div className="text-white text-2xl font-medium">
           Published vouchers
         </div>
