@@ -92,7 +92,7 @@ const ProjectListPage: React.FC = () => {
               {/* Status */}
               <td className="py-3 px-4 bg-[#141414]">
                 <span
-                  className="px-3 py-1 rounded-full text-sm"
+                  className="px-3 py-2 rounded-full text-sm"
                   style={{
                     color: project.statusColor,
                     backgroundColor: `${project.statusColor}10`,
