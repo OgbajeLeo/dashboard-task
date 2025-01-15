@@ -46,7 +46,7 @@ const ProjectListPage: React.FC = () => {
 
   return (
     <div className="w-full bg-[#181818] rounded-xl mb-20 p-5 pb-[35px] mt-10 slide-up">
-      <div className="flex items-center justify-between h-full mb-2">
+      <div className="flex items-center justify-between h-full mb-5">
         <div className="text-white text-2xl font-medium ">Listed projects</div>
         <div className="border border-[#4A4A4A] rounded-lg text-white text-[13px] py-2 px-3 cursor-pointer hover:scale-105">
           View report

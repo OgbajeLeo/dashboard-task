@@ -68,7 +68,7 @@ const VoucherHolders = () => {
                     </div>
                   </div>
                   <div className="w-full px-4 justify-between items-center inline-flex">
-                    <div className="text-[#4a4a4a] text-sm font-normal  leading-normal">
+                    <div className="text-[#4a4a4a] text-sm font-normal  leading-[24px]">
                       {holder.valueSpent} value spent
                     </div>
                     <div className="text-[#ba2543] text-sm font-normal  leading-normal">{`Expires ${holder.expiry}`}</div>

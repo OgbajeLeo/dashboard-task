@@ -3,6 +3,8 @@ import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import profile from "../../public/profile.png";
 import {
+  ActiveHomeIcon,
+  ActiveVoucherIcon,
   AffliateIcon,
   AnalyticsIcon,
   BellIcon,
@@ -30,26 +32,72 @@ const Sidebar = ({ children }: SidebarProps) => {
   const path = usePathname();
 
   const menuItems = [
-    { name: "Dashboard", route: "/", icon: HomeIcon },
-    { name: "Projects", route: "/dashboard/projects", icon: ProjectIcon },
-    { name: "Vouchers", route: "/voucher", icon: VoucherIcon },
-    { name: "Analytics", route: "/dashboard/analytics", icon: AnalyticsIcon },
-    { name: "Spotlight", route: "/dashboard/spotlight", icon: SportlightIcon },
-    { name: "Rewards", route: "/dashboard/rewards", icon: RewardsIcon },
+    {
+      name: "Dashboard",
+      route: "/",
+      icon: HomeIcon,
+      activeIcon: ActiveHomeIcon,
+    },
+    {
+      name: "Projects",
+      route: "/dashboard/projects",
+      icon: ProjectIcon,
+      activeIcon: ProjectIcon,
+    },
+    {
+      name: "Vouchers",
+      route: "/voucher",
+      icon: VoucherIcon,
+      activeIcon: ActiveVoucherIcon,
+    },
+    {
+      name: "Analytics",
+      route: "/dashboard/analytics",
+      icon: AnalyticsIcon,
+      activeIcon: AnalyticsIcon,
+    },
+    {
+      name: "Spotlight",
+      route: "/dashboard/spotlight",
+      icon: SportlightIcon,
+      activeIcon: SportlightIcon,
+    },
+    {
+      name: "Rewards",
+      route: "/dashboard/rewards",
+      icon: RewardsIcon,
+      activeIcon: RewardsIcon,
+    },
     {
       name: "Affiliate Program",
       route: "/dashboard/affiliate",
       icon: AffliateIcon,
+      activeIcon: AffliateIcon,
     },
-    { name: "Payouts", route: "/dashboard/payouts", icon: PayoutsIcon },
-    { name: "Referral", route: "/dashboard/referral", icon: ReferralsIcon },
-    { name: "Settings", route: "/dashboard/settings", icon: SettingsIcon },
+    {
+      name: "Payouts",
+      route: "/dashboard/payouts",
+      icon: PayoutsIcon,
+      activeIcon: PayoutsIcon,
+    },
+    {
+      name: "Referral",
+      route: "/dashboard/referral",
+      icon: ReferralsIcon,
+      activeIcon: ReferralsIcon,
+    },
+    {
+      name: "Settings",
+      route: "/dashboard/settings",
+      icon: SettingsIcon,
+      activeIcon: SettingsIcon,
+    },
   ];
 
   return (
     <div className="flex h-screen w-full">
       {/* Sidebar Section */}
-      <div className="w-[237px] bg-[#151515] text-[#b3b4b3] flex flex-col justify-between">
+      <div className="w-[16.5%] bg-[#151515] text-[#b3b4b3] flex flex-col justify-between">
         {/* Logo Section */}
         <div className="pt-[30px] pl-[28px] pb-[59px]">
           <Logo />
@@ -61,17 +109,36 @@ const Sidebar = ({ children }: SidebarProps) => {
             {menuItems.map((item) => (
               <div
                 key={item.name}
-                className={`flex items-center py-3 px-4 cursor-pointer ${
+                className={`flex items-center py-3 px-4 cursor-pointer group ${
                   path === item.route
-                    ? "bg-[#212121] text-white border-l-2 border-[#a7fc00]"
-                    : "hover:bg-[#1e1e1e] hover:scale-105 hover:opacity-90 transition-all ease-in-out duration-200"
+                    ? "bg-[#212121] text-white border-l-[3px] border-[#a7fc00]"
+                    : "hover:bg-[#1e1e1e] hover:scale-105 hover:opacity-90 transition-all ease-in-out duration-200 hover:text-white"
                 }`}
                 onClick={() => router.push(item.route)}
               >
                 <span className="text-lg mr-4">
-                  <item.icon />
+                  {path === item.route ? (
+                    // Render only the active icon when the path is active
+                    item.activeIcon ? (
+                      <item.activeIcon />
+                    ) : (
+                      <item.icon />
+                    )
+                  ) : (
+                    // Render different icons on hover for non-active paths
+                    <>
+                      <span className="group-hover:hidden">
+                        <item.icon />
+                      </span>
+                      {item.activeIcon && (
+                        <span className="hidden group-hover:block">
+                          <item.activeIcon />
+                        </span>
+                      )}
+                    </>
+                  )}
                 </span>
-                <span className="text-base font-medium">{item.name}</span>
+                <span className="text-base font-medium ">{item.name}</span>
               </div>
             ))}
           </div>
@@ -97,7 +164,7 @@ const Sidebar = ({ children }: SidebarProps) => {
       </div>
 
       {/* Sidebar Header Section */}
-      <div className="fixed left-[237px] w-[calc(100%-237px)] h-[92px] pr-8 py-6 bg-[#030500] flex justify-between items-center">
+      <div className="fixed left-[16.5%] w-[calc(100%-16.5%)] h-[92px] pr-8 py-6 bg-[#030500] flex justify-between items-center">
         <div className="w-[298px] h-11 pl-6 ml-10 bg-[#181818] rounded-[100px] flex items-center gap-2.5 focus:ring-2 focus:border-primary-green">
           <SearchIcon />
           <input
