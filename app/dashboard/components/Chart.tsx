@@ -212,7 +212,7 @@ const FundraisingChart = () => {
       </div>
 
       <div className="h-[130px] w-full">
-        <Line data={data} options={options} />
+        <Line data={data} options={options} className=" "/>
       </div>
     </div>
   );

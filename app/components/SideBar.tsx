@@ -103,7 +103,7 @@ const Sidebar = ({ children }: SidebarProps) => {
           <Logo />
         </div>
 
-        <div className="h-screen overflow-y-auto no-scrollbar">
+        <div className="h-screen  overflow-hidden  side-link-list">
           {/* Menu Section */}
           <div className="flex-1 pl-4 space-y-2">
             {menuItems.map((item) => (
@@ -183,7 +183,7 @@ const Sidebar = ({ children }: SidebarProps) => {
       </div>
 
       {/* Main Content  */}
-      <div className="flex-1 h-[calc(100%-104px)] no-scrollbar  overflow-y-auto mt-[104px] ml-10 mr-8">
+      <div className="flex-1 h-[calc(100%-104px)] no-scrollbar  overflow-y-auto mt-[104px] ml-10 pr-8">
         {children}
       </div>
     </div>

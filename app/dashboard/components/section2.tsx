@@ -46,7 +46,7 @@ const ProjectListPage: React.FC = () => {
 
   return (
     <div className="w-full bg-[#181818] rounded-xl mb-20 p-5 pb-[35px] mt-10 slide-up">
-      <div className="flex items-center justify-between h-full mb-5">
+      <div className="flex items-center justify-between h-full mb-[23px]">
         <div className="text-white text-2xl font-medium ">Listed projects</div>
         <div className="border border-[#4A4A4A] rounded-lg text-white text-[13px] py-2 px-3 cursor-pointer hover:scale-105">
           View report
@@ -58,10 +58,10 @@ const ProjectListPage: React.FC = () => {
           <tr className="text-[#b3b4b3] text-sm font-normal py-2.5">
             <th className="py-2 px-4 font-normal ">Project</th>
             <th className="py-2 px-4 font-normal ">Status</th>
-            <th className="py-2 px-4 font-normal ">Date Listed</th>
-            <th className="py-2 px-4 font-normal ">Funding Goal</th>
-            <th className="py-2 px-4 font-normal ">Funding Progress</th>
-            <th className="py-2 px-4 font-normal ">Funding Deadline</th>
+            <th className="py-2 px-4 font-normal ">Date listed</th>
+            <th className="py-2 px-4 font-normal ">Funding goal</th>
+            <th className="py-2 px-4 font-normal ">Funding progress</th>
+            <th className="py-2 px-4 font-normal ">Funding deadline</th>
           </tr>
         </thead>
         <tbody className="space-y-2 w-full rounded-2xl ">

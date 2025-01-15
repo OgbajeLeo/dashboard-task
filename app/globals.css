@@ -61,6 +61,38 @@ body {
 
      
 }
+.side-link-list {
+  
+  overflow-y: hidden;
+  transition: overflow-y 0.2s ease-in-out;
+  /* background: #007bff; */
+}
+
+.side-link-list:hover {
+  overflow-y: auto;
+}
+
+.side-link-list::-webkit-scrollbar-track {
+  background: transparent;
+  display: none;
+}
+
+.side-link-list::-webkit-scrollbar-button {
+  display: none;
+}
+
+.side-link-list::-webkit-scrollbar {
+  width: 6px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.side-link-list::-webkit-scrollbar-thumb {
+  background-color: #555;
+  /* Thumb color */
+  border: 3px solid transparent;
+  /* background-clip: padding-box; */
+}
 @keyframes slideUp {
   0% {
     transform: translateY(100%);
