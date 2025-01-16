@@ -36,10 +36,10 @@ const FundraisingChart = () => {
         label: "Cityscape L",
         data:
           selectedPeriod === "14d"
-            ? [1000, 500, 1500]
+            ? [1000, 0, 1500]
             : selectedPeriod === "7d"
-            ? [500, 1500, 1000]
-            : [2000, 0, 3000], // Example for last month
+            ? [0, 1500, 1000]
+            : [2000, 500, 2000], // Example for last month
         borderColor: "#683fea",
         backgroundColor: "rgba(104, 63, 234, 0.2)",
         borderWidth: 1,
@@ -49,7 +49,7 @@ const FundraisingChart = () => {
         label: "Truffle Ski",
         data:
           selectedPeriod === "14d"
-            ? [500, 1500, 1000]
+            ? [0, 1500, 1000]
             : selectedPeriod === "7d"
             ? [1000, 2000, 1000]
             : [1000, 1000, 2000], // Example for last month
@@ -103,10 +103,11 @@ const FundraisingChart = () => {
           font: {
             size: 14,
           },
-          padding: 20,
+          padding: 2,
         },
         grid: {
           display: false,
+          drawBorder: false,
         },
       },
       y: {
@@ -115,13 +116,22 @@ const FundraisingChart = () => {
           font: {
             size: 14,
           },
-          // Adjusted callback to match expected types
-          callback: function (tickValue: string | number) {
-            return `${(tickValue as number) / 1000}k`; // Ensure tickValue is handled as number
+
+          stepSize: 500, // Increment by 1000 to skip fractional values
+          callback: function (value: number | string) {
+            return +value % 1000 === 0 ? `${+value / 1000}k` : ""; // Show only whole numbers
           },
         },
         grid: {
-          color: "#343434",
+          drawBorder: false,
+          color: (ctx: any) => {
+            const value = ctx.tick.value;
+            // Display dotted lines for 0.5k, 1.5k, 2.5k
+            if (value === 500 || value === 1500 || value === 2500) {
+              return "rgba(255, 200, 255, 0.02123232347554545)"; // Dotted line color
+            }
+            return "rgba(255, 255, 255, 0.2)"; // Hide other lines
+          },
         },
       },
     },
@@ -193,7 +203,7 @@ const FundraisingChart = () => {
         </div>
       </div>
 
-      <div className="mb-8 flex gap-4 items-center justify-between">
+      <div className="mb-[33px] flex gap-4 items-end justify-between">
         <div className="text-[28px] font-medium text-white">$3,520.50</div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
@@ -212,7 +222,7 @@ const FundraisingChart = () => {
       </div>
 
       <div className="h-[130px] w-full">
-        <Line data={data} options={options} className=" "/>
+        <Line data={data} options={options} className=" h-[120px]"/>
       </div>
     </div>
   );
