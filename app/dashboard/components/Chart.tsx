@@ -124,7 +124,7 @@ const FundraisingChart = () => {
         },
         grid: {
           drawBorder: false,
-          color: (ctx: any) => {
+          color: (ctx: { tick: { value: number } }) => {
             const value = ctx.tick.value;
             // Display dotted lines for 0.5k, 1.5k, 2.5k
             if (value === 500 || value === 1500 || value === 2500) {
