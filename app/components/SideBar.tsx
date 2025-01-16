@@ -183,7 +183,7 @@ const Sidebar = ({ children }: SidebarProps) => {
       </div>
 
       {/* Main Content  */}
-      <div className="flex-1 h-[calc(100%-104px)] no-scrollbar  overflow-y-auto mt-[104px] ml-10 pr-8">
+      <div className="flex-1 h-[calc(100%-104px)] no-scrollbar  overflow-y-auto mt-[104px] ml-10 pr-8 pl-2">
         {children}
       </div>
     </div>

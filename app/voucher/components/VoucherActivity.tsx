@@ -62,22 +62,22 @@ const StatusBadge = ({ status }: { status: Status }) => {
 const ActivityRow = ({ activity }: { activity: VoucherActivity }) => {
   return (
     <div className="self-stretch p-5 bg-[#141414] rounded-2xl justify-start items-center inline-flex overflow-hidden">
-      <div className="w-[185px] text-white text-[15px] font-normal">
+      <div className="w-[185px] text-neutral-gray text-[15px] font-normal">
         {activity.voucherNumber}
       </div>
-      <div className="w-[185px] text-white text-[15px] font-normal">
+      <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
         {activity.dateCreated}
       </div>
       <div className="w-[185px] flex-col justify-start items-start gap-2.5 inline-flex">
         <StatusBadge status={activity.status} />
       </div>
-      <div className="w-[185px] text-white text-[15px] font-normal">
+      <div className="w-[185px] text-neutral-gray text-[15px] font-normal">
         Seen by {activity.reach} people
       </div>
-      <div className="w-[185px] text-white text-[15px] font-normal">
+      <div className="w-[185px] text-neutral-gray text-[15px] font-normal">
         Seen {activity.impressions} times
       </div>
-      <div className="text-white text-[15px] font-normal">
+      <div className="text-neutral-gray text-[15px] font-normal">
         {activity.investorCount}
       </div>
     </div>

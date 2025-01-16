@@ -1,6 +1,13 @@
 import React from "react";
 import depth  from '@/public/depth.png'
 import Image from "next/image";
+import { Lato } from "next/font/google";
+
+const lato = Lato({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const CashbackRequests = () => {
   const requests = [
@@ -71,7 +78,7 @@ const CashbackRequests = () => {
                     </div>
                   </div>
                   <div className="self-stretch px-2 py-px bg-[#1d1d1d] rounded justify-start items-center gap-1 flex">
-                    <div className="text-[#cdcdcc] text-xs font-medium font-['Lato'] leading-tight">
+                    <div className={`text-[#cdcdcc] text-xs font-medium font-['Lato'] leading-tight ${lato.className}`}>
                       {request.id}
                     </div>
                   </div>

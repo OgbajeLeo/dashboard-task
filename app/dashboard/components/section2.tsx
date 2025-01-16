@@ -47,7 +47,7 @@ const ProjectListPage: React.FC = () => {
   return (
     <div className="w-full bg-[#181818] rounded-xl mb-20 p-5 pb-[35px] mt-10 slide-up">
       <div className="flex items-center justify-between h-full mb-[23px]">
-        <div className="text-white text-2xl font-medium ">Listed projects</div>
+        <div className="text-white text-[24px] font-[500px] ">Listed projects</div>
         <div className="border border-[#4A4A4A] rounded-lg text-white text-[13px] py-2 px-3 cursor-pointer hover:scale-105">
           View report
         </div>
@@ -55,7 +55,7 @@ const ProjectListPage: React.FC = () => {
 
       <table className="w-full text-left table-auto border-collapse">
         <thead className="py-2.5 h-[51px]">
-          <tr className="text-[#b3b4b3] text-sm font-normal py-2.5">
+          <tr className="text-[#b3b4b3] text-[14px] font-normal py-2.5">
             <th className="py-2 px-4 font-normal ">Project</th>
             <th className="py-2 px-4 font-normal ">Status</th>
             <th className="py-2 px-4 font-normal ">Date listed</th>
@@ -81,7 +81,7 @@ const ProjectListPage: React.FC = () => {
                   alt={project.name}
                 />
                 <div>
-                  <div className="text-white text-base font-medium">
+                  <div className="text-white text-base font-[500]">
                     {project.name}
                   </div>
                   <div className="text-[#838383] text-[15px]">
