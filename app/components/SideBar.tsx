@@ -138,7 +138,7 @@ const Sidebar = ({ children }: SidebarProps) => {
                     </>
                   )}
                 </span>
-                <span className="text-base font-[400] ">{item.name}</span>
+                <span className="text-base font-[300] ">{item.name}</span>
               </div>
             ))}
           </div>
@@ -150,14 +150,14 @@ const Sidebar = ({ children }: SidebarProps) => {
               onClick={() => router.push("/dashboard/support")}
             >
               <SupportIcon />
-              <span className="text-base font-[400]">Support</span>
+              <span className="text-base font-[300]">Support</span>
             </div>
             <div
               className="flex items-center py-3 px-4 gap-4 rounded-lg cursor-pointer hover:bg-[#1e1e1e]"
               onClick={() => router.push("/logout")}
             >
               <LogoutIcon />
-              <span className="text-base font-[400]">Logout</span>
+              <span className="text-base font-[300]">Logout</span>
             </div>
           </div>
         </div>
