@@ -61,26 +61,26 @@ const StatusBadge = ({ status }: { status: Status }) => {
 
 const ActivityRow = ({ activity }: { activity: VoucherActivity }) => {
   return (
-    <div className="self-stretch p-5 bg-[#141414] rounded-2xl justify-start items-center inline-flex overflow-hidden">
-      <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
-        {activity.voucherNumber}
-      </div>
-      <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
+    <tr className="px-[22px] py-[20px] bg-[#141414] space-y-2  border-b-[8px] border-[#181818] w-full ">
+      <td className="px-[22px]  text-neutral-gray text-[15px] font-[300] rounded-l-2xl">
+        <div className="h-[72px] flex justify-start items-center">{activity.voucherNumber}</div>
+      </td>
+      <td className="px-4 py-3 text-neutral-gray text-[15px] font-[300]">
         {activity.dateCreated}
-      </div>
-      <div className="w-[185px] flex-col justify-start items-start gap-2.5 inline-flex">
+      </td>
+      <td className="px-4 py-3">
         <StatusBadge status={activity.status} />
-      </div>
-      <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
+      </td>
+      <td className="px-4 py-3 text-neutral-gray text-[15px] font-[300]">
         Seen by {activity.reach} people
-      </div>
-      <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
+      </td>
+      <td className="px-4 py-3 text-neutral-gray text-[15px] font-[300]">
         Seen {activity.impressions} times
-      </div>
-      <div className="text-neutral-gray text-[15px] font-[300]">
+      </td>
+      <td className="px-4 py-3 text-neutral-gray text-[15px] font-[300] rounded-r-2xl">
         {activity.investorCount}
-      </div>
-    </div>
+      </td>
+    </tr>
   );
 };
 
@@ -118,38 +118,41 @@ const sampleActivities: VoucherActivity[] = [
 const VoucherActivity = () => {
   return (
     <div className="w-full p-5 bg-[#181818] rounded-xl mt-[18px] slide-up mb-20">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-4 py-4 px-4">
         <div className="text-white text-2xl font-[400]">Voucher activity</div>
         <div className="text-[#a7fc00] text-sm cursor-pointer">See all</div>
       </div>
 
-      <div className="flex-col justify-start items-start inline-flex w-full">
-        <div className="self-stretch px-5 py-4  justify-start items-center inline-flex overflow-hidden">
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
-            Voucher number
-          </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
-            Date created
-          </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
-            Status
-          </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
-            Reach
-          </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
-            Impressions
-          </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
-            Investor count
-          </div>
-        </div>
-
-        <div className="self-stretch flex-col justify-start items-start gap-2 flex">
-          {sampleActivities.map((activity) => (
-            <ActivityRow key={activity.id} activity={activity} />
-          ))}
-        </div>
+      <div className="overflow-x-auto">
+        <table className="min-w-full rounded-2xl">
+          <thead>
+            <tr>
+              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+                Voucher number
+              </th>
+              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+                Date created
+              </th>
+              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+                Status
+              </th>
+              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+                Reach
+              </th>
+              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+                Impressions
+              </th>
+              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+                Investor count
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {sampleActivities.map((activity) => (
+              <ActivityRow key={activity.id} activity={activity} />
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

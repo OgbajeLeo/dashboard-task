@@ -103,7 +103,7 @@ const FundraisingChart = () => {
           font: {
             size: 14,
           },
-          padding: 2,
+          paddingLeft: 2,
         },
         grid: {
           display: false,

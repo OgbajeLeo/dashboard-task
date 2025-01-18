@@ -111,3 +111,8 @@ body {
 .slide-up {
   animation: slideUp 2.5s ease-out;
 }
+@media (max-width: 768px) {
+  .w-b {
+    width: 100%;
+  }
+}
