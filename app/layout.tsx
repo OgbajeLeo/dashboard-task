@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Figtree} from "next/font/google";
+// import { Figtree} from "next/font/google";
 import "./globals.css";
+import "./main.css"
 
 
-const figTree = Figtree({
-  variable: "--font-fig-tree",
-  subsets: ["latin"],
-});
+// const figTree = Figtree({
+//   variable: "--font-fig-tree",
+//   subsets: ["latin"],
+//   weight: ["300", "400", "500", "600", "700", "800", "900"],
+//   fallback:['sans-serif']
+// });
 
 
 
@@ -22,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${figTree.variable} `}>
+      <body className={` `}>
         {children}
       </body>
     </html>

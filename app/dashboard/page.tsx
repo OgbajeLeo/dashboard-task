@@ -18,7 +18,7 @@ const Dashboard = () => {
                 Real-time overview of your listed projects
               </div>
             </div>
-            <button className="p-3 h-[42px] bg-white rounded-xl justify-center items-center flex hover:scale-105">
+            <button className="h-[42px] w-[159px] bg-white rounded-xl justify-center items-center flex hover:scale-105">
               <PlusIcon />
               <div className="ml-2 text-[#030500] text-[15px] font-medium leading-[18px]">
                 List new project

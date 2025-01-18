@@ -128,7 +128,7 @@ const FundraisingChart = () => {
             const value = ctx.tick.value;
             // Display dotted lines for 0.5k, 1.5k, 2.5k
             if (value === 500 || value === 1500 || value === 2500) {
-              return "rgba(255, 200, 255, 0.02123232347554545)"; // Dotted line color
+              return "rgba(255, 200, 255, 0.06123232347554545)"; // Dotted line color
             }
             return "rgba(255, 255, 255, 0.2)"; // Hide other lines
           },
@@ -221,7 +221,7 @@ const FundraisingChart = () => {
         </div>
       </div>
 
-      <div className="h-[130px] w-full">
+      <div className="h-[130px] w-full pl-4">
         <Line data={data} options={options} className=" h-[120px]"/>
       </div>
     </div>

@@ -10,7 +10,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #030500;
-    --font-fig-tree: 'Figtree', sans-serif; /* Fallback included */
+    /* --font-fig-tree: 'Figtree', sans-serif;  */
     --foreground: #ededed;
   }
 }
@@ -19,7 +19,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: var(--font-fig-tree);
+
 }
 @layer utilities {
 
@@ -66,6 +66,7 @@ body {
   overflow-y: hidden;
   transition: overflow-y 0.2s ease-in-out;
   /* background: #007bff; */
+  
 }
 
 .side-link-list:hover {
@@ -85,11 +86,13 @@ body {
   width: 6px;
   padding-left: 2px;
   padding-right: 2px;
+  border-radius: 100px;
 }
 
 .side-link-list::-webkit-scrollbar-thumb {
   background-color: #555;
   /* Thumb color */
+  border-radius: 100px;
   border: 3px solid transparent;
   /* background-clip: padding-box; */
 }

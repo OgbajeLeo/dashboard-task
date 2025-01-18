@@ -1,6 +1,7 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
 import FundraisingChart from "./Chart";
+// import FundsDashboard from "./Chart2";
 
 type CardData = {
   title: string;
@@ -103,7 +104,9 @@ const Card: React.FC = () => {
               </div>
               <div
                 className={`${
-                  index === 3 ? "text-[24px] mt-3" : "text-[28px] mt-[30px] mb-3"
+                  index === 3
+                    ? "text-[24px] mt-3"
+                    : "text-[28px] mt-[30px] mb-3"
                 } text-center text-white  font-medium`}
               >
                 {card.count}
@@ -115,6 +118,7 @@ const Card: React.FC = () => {
 
         <div className="w-full h-full">
           <FundraisingChart />
+          {/* <FundsDashboard /> */}
         </div>
       </div>
     );

@@ -109,7 +109,7 @@ const Sidebar = ({ children }: SidebarProps) => {
             {menuItems.map((item) => (
               <div
                 key={item.name}
-                className={`flex items-center py-3 px-4 cursor-pointer group ${
+                className={`flex items-center py-3 px-4 cursor-pointer font-normal group ${
                   path === item.route
                     ? "bg-[#212121] text-white border-l-[3px] border-[#a7fc00]"
                     : "hover:bg-[#1e1e1e] hover:scale-105 hover:opacity-90 transition-all ease-in-out duration-200 hover:text-white"
