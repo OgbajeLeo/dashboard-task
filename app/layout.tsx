@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 // import { Figtree} from "next/font/google";
-import "./globals.css";
 import "./main.css"
+import "./globals.css";
 
 
 // const figTree = Figtree({
