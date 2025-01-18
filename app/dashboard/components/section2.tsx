@@ -84,7 +84,7 @@ const ProjectListPage: React.FC = () => {
                   <div className="text-white text-base font-[400]">
                     {project.name}
                   </div>
-                  <div className="text-[#838383] text-[15px]">
+                  <div className="text-[#838383] text-[15px] font-[300]">
                     {project.category}
                   </div>
                 </div>
