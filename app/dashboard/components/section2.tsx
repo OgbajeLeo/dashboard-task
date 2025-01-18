@@ -55,13 +55,13 @@ const ProjectListPage: React.FC = () => {
 
       <table className="w-full text-left table-auto border-collapse">
         <thead className="py-2.5 h-[51px]">
-          <tr className="text-[#b3b4b3] text-[14px] font-normal py-2.5">
-            <th className="py-2 px-4 font-normal ">Project</th>
-            <th className="py-2 px-4 font-normal ">Status</th>
-            <th className="py-2 px-4 font-normal ">Date listed</th>
-            <th className="py-2 px-4 font-normal ">Funding goal</th>
-            <th className="py-2 px-4 font-normal ">Funding progress</th>
-            <th className="py-2 px-4 font-normal ">Funding deadline</th>
+          <tr className="text-[#b3b4b3] text-[14px] font-[300] py-2.5">
+            <th className="py-2 px-4 font-[300] ">Project</th>
+            <th className="py-2 px-4 font-[300] ">Status</th>
+            <th className="py-2 px-4 font-[300] ">Date listed</th>
+            <th className="py-2 px-4 font-[300] ">Funding goal</th>
+            <th className="py-2 px-4 font-[300] ">Funding progress</th>
+            <th className="py-2 px-4 font-[300] ">Funding deadline</th>
           </tr>
         </thead>
         <tbody className="space-y-2 w-full rounded-2xl ">
@@ -81,7 +81,7 @@ const ProjectListPage: React.FC = () => {
                   alt={project.name}
                 />
                 <div>
-                  <div className="text-white text-base font-[500]">
+                  <div className="text-white text-base font-[400]">
                     {project.name}
                   </div>
                   <div className="text-[#838383] text-[15px]">

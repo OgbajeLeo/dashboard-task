@@ -156,7 +156,7 @@ const VoucherCard: React.FC<VoucherData> = ({ title, count, icon }) => {
   return (
     <div className="grow shrink basis-0 h-[126px] px-5 py-4 bg-[#181818] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] my-10 flex-col justify-start items-start gap-6 flex">
       <div className="self-stretch justify-between items-center inline-flex">
-        <div className="text-center text-white text-base font-normal ">
+        <div className="text-center text-white text-base font-[300] ">
           {title}
         </div>
         <div className="w-9 h-9 rounded-lg justify-center items-center flex">
@@ -164,7 +164,7 @@ const VoucherCard: React.FC<VoucherData> = ({ title, count, icon }) => {
         </div>
       </div>
       <div className="self-stretch justify-start items-center gap-3 inline-flex">
-        <div className="text-center text-white text-[28px] font-medium ">
+        <div className="text-center text-white text-[28px] font-[400] ">
           {count}
         </div>
       </div>

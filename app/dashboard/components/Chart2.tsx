@@ -59,12 +59,12 @@ export default function FundsDashboard() {
     <div className="w-full bg-[#181818] p-4 px-5 rounded-lg">
       {/* <div className="flex flex-row items-start justify-between pb-7"> */}
       <div className="flex justify-between items-center w-full">
-        <h2 className="text-[16px] font-[500] text-white">Funds raised</h2>
+        <h2 className="text-[16px] font-[400] text-white">Funds raised</h2>
         {/* Custom Dropdown */}
         <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex text-[13px] font-[500] items-center justify-center gap-2 w-[118px] h-[32px] bg-neutral-800 text-white rounded-md focus:outline-none"
+            className="flex text-[13px] font-[400] items-center justify-center gap-2 w-[118px] h-[32px] bg-neutral-800 text-white rounded-md focus:outline-none"
           >
             <span>{selectedRange}</span>
             <div
@@ -114,7 +114,7 @@ export default function FundsDashboard() {
       {/* </div> */}
 
       <div className="flex justify-between items-center mb-[33px]">
-        <p className="text-[28px] font-[500] text-white">${totalFunds}</p>
+        <p className="text-[28px] font-[400] text-white">${totalFunds}</p>
 
         {/* Legend */}
         <div className="flex gap-4 justify-end">

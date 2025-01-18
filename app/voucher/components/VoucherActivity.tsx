@@ -52,7 +52,7 @@ const StatusBadge = ({ status }: { status: Status }) => {
     <div
       className={`px-3 py-1 ${styles.bgColor} rounded-full border ${styles.borderColor} justify-center items-center gap-2 inline-flex`}
     >
-      <div className={`${styles.textColor} text-sm font-normal`}>
+      <div className={`${styles.textColor} text-sm font-[300]`}>
         {styles.label}
       </div>
     </div>
@@ -62,7 +62,7 @@ const StatusBadge = ({ status }: { status: Status }) => {
 const ActivityRow = ({ activity }: { activity: VoucherActivity }) => {
   return (
     <div className="self-stretch p-5 bg-[#141414] rounded-2xl justify-start items-center inline-flex overflow-hidden">
-      <div className="w-[185px] text-neutral-gray text-[15px] font-normal">
+      <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
         {activity.voucherNumber}
       </div>
       <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
@@ -71,13 +71,13 @@ const ActivityRow = ({ activity }: { activity: VoucherActivity }) => {
       <div className="w-[185px] flex-col justify-start items-start gap-2.5 inline-flex">
         <StatusBadge status={activity.status} />
       </div>
-      <div className="w-[185px] text-neutral-gray text-[15px] font-normal">
+      <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
         Seen by {activity.reach} people
       </div>
-      <div className="w-[185px] text-neutral-gray text-[15px] font-normal">
+      <div className="w-[185px] text-neutral-gray text-[15px] font-[300]">
         Seen {activity.impressions} times
       </div>
-      <div className="text-neutral-gray text-[15px] font-normal">
+      <div className="text-neutral-gray text-[15px] font-[300]">
         {activity.investorCount}
       </div>
     </div>
@@ -119,28 +119,28 @@ const VoucherActivity = () => {
   return (
     <div className="w-full p-5 bg-[#181818] rounded-xl mt-[18px] slide-up mb-20">
       <div className="flex justify-between items-center mb-4">
-        <div className="text-white text-2xl font-medium">Voucher activity</div>
+        <div className="text-white text-2xl font-[400]">Voucher activity</div>
         <div className="text-[#a7fc00] text-sm cursor-pointer">See all</div>
       </div>
 
       <div className="flex-col justify-start items-start inline-flex w-full">
         <div className="self-stretch px-5 py-4  justify-start items-center inline-flex overflow-hidden">
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-normal">
+          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
             Voucher number
           </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-normal">
+          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
             Date created
           </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-normal">
+          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
             Status
           </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-normal">
+          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
             Reach
           </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-normal">
+          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
             Impressions
           </div>
-          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-normal">
+          <div className="w-[185px] text-[#b3b4b3] text-[15px] font-[300]">
             Investor count
           </div>
         </div>

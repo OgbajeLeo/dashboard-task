@@ -1,5 +1,5 @@
 import React from "react";
-import frame from '@/public/frame.png'
+import frame from "@/public/frame.png";
 import Image from "next/image";
 
 const VoucherHolders = () => {
@@ -34,8 +34,8 @@ const VoucherHolders = () => {
   return (
     <div className="w-full mt-14 p-5 bg-[#181818] rounded-xl slide-up">
       <div className=" justify-between items-center flex w-full mb-5">
-        <div className=" text-white text-2xl font-medium ">Voucher holders</div>
-        <button className="text-[#a7fc00] text-sm font-normal  leading-normal hover:underline ">
+        <div className=" text-white text-2xl font-[400] ">Voucher holders</div>
+        <button className="text-[#a7fc00] text-sm font-[300]  leading-normal hover:underline ">
           See all
         </button>
       </div>
@@ -54,24 +54,24 @@ const VoucherHolders = () => {
               <div className="grow relative shrink basis-0 w-full py-2.5 bg-white rounded-bl-2xl rounded-br-2xl border-t flex-col justify-start items-center gap-2.5 inline-flex overflow-hidden">
                 <div className="w-8 h-8 bg-[#030500] absolute -right-[20px] top-8 rounded-full" />
                 <div className="w-8 h-8 bg-[#030500] rounded-full absolute -left-[20px] top-8" />
-                <div className="w-full text-center text-[#1d1d1d] text-lg font-medium  leading-[30px]">
+                <div className="w-full text-center text-[#1d1d1d] text-lg font-[400]  leading-[30px]">
                   {holder.name}
                 </div>
                 <div className="w-full h-[0px] border border-[#d9dad9]"></div>
                 <div className="w-full h-[70px] flex-col justify-center items-center gap-2 flex">
                   <div className="w-full px-4 justify-between items-start inline-flex">
-                    <div className="text-[#030500] text-xl font-medium  leading-relaxed">
+                    <div className="text-[#030500] text-xl font-[400]  leading-relaxed">
                       {holder.amount}
                     </div>
-                    <div className="text-[#030500] text-sm font-medium  leading-normal">
+                    <div className="text-[#030500] text-sm font-[400]  leading-normal">
                       {holder.voucherId}
                     </div>
                   </div>
                   <div className="w-full px-4 justify-between items-center inline-flex">
-                    <div className="text-[#4a4a4a] text-sm font-normal  leading-[24px]">
+                    <div className="text-[#4a4a4a] text-sm font-[300]  leading-[24px]">
                       {holder.valueSpent} value spent
                     </div>
-                    <div className="text-[#ba2543] text-sm font-normal  leading-normal">{`Expires ${holder.expiry}`}</div>
+                    <div className="text-[#ba2543] text-sm font-[300]  leading-normal">{`Expires ${holder.expiry}`}</div>
                   </div>
                 </div>
               </div>

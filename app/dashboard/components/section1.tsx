@@ -72,56 +72,67 @@ const cardData: CardData[] = [
   },
   {
     title: "Funding progress",
-      count: "25%",
-    icon:(<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="36" height="36" rx="8" fill="#1C2A00"/>
-<path d="M16.4122 10.6552C16.769 10.6132 17.1284 10.7074 17.4187 10.9191C17.7089 11.1308 17.9085 11.4442 17.9775 11.7967L17.9962 11.922L18 12V17.25C18 17.4337 18.0675 17.611 18.1895 17.7483C18.3116 17.8856 18.4798 17.9733 18.6622 17.9947L18.75 18H23.85C24.2478 18 24.6294 18.158 24.9107 18.4393C25.192 18.7206 25.35 19.1022 25.35 19.5C25.35 19.5571 25.3434 19.6139 25.3305 19.6695C25.0303 20.9645 24.3914 22.1564 23.4791 23.1233C22.5668 24.0901 21.4139 24.7971 20.1385 25.1719C18.8631 25.5466 17.511 25.5757 16.2207 25.256C14.9304 24.9364 13.7482 24.2795 12.7952 23.3527C11.8422 22.4259 11.1527 21.2625 10.7973 19.9816C10.4418 18.7007 10.4332 17.3483 10.7723 16.0629C11.1114 14.7776 11.786 13.6055 12.7271 12.6666C13.6682 11.7277 14.8419 11.0558 16.128 10.7197L16.3305 10.6695L16.4122 10.6552Z" fill="#A7FC00"/>
-<path d="M19.5 11.625V15.75C19.5 15.9489 19.579 16.1397 19.7197 16.2803C19.8603 16.421 20.0511 16.5 20.25 16.5H24.375C24.4949 16.5 24.613 16.4712 24.7195 16.4161C24.8259 16.361 24.9176 16.2812 24.9869 16.1834C25.0562 16.0855 25.101 15.9725 25.1176 15.8538C25.1342 15.735 25.1221 15.6141 25.0823 15.501C24.7098 14.443 24.1047 13.482 23.3116 12.6888C22.5186 11.8956 21.5577 11.2904 20.4998 10.9177C20.3866 10.8778 20.2656 10.8656 20.1467 10.8821C20.0279 10.8986 19.9148 10.9434 19.8169 11.0127C19.7189 11.0819 19.639 11.1737 19.5839 11.2803C19.5288 11.3868 19.5 11.505 19.5 11.625Z" fill="#A7FC00"/>
-</svg>
-),
+    count: "25%",
+    icon: (
+      <svg
+        width="36"
+        height="36"
+        viewBox="0 0 36 36"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="36" height="36" rx="8" fill="#1C2A00" />
+        <path
+          d="M16.4122 10.6552C16.769 10.6132 17.1284 10.7074 17.4187 10.9191C17.7089 11.1308 17.9085 11.4442 17.9775 11.7967L17.9962 11.922L18 12V17.25C18 17.4337 18.0675 17.611 18.1895 17.7483C18.3116 17.8856 18.4798 17.9733 18.6622 17.9947L18.75 18H23.85C24.2478 18 24.6294 18.158 24.9107 18.4393C25.192 18.7206 25.35 19.1022 25.35 19.5C25.35 19.5571 25.3434 19.6139 25.3305 19.6695C25.0303 20.9645 24.3914 22.1564 23.4791 23.1233C22.5668 24.0901 21.4139 24.7971 20.1385 25.1719C18.8631 25.5466 17.511 25.5757 16.2207 25.256C14.9304 24.9364 13.7482 24.2795 12.7952 23.3527C11.8422 22.4259 11.1527 21.2625 10.7973 19.9816C10.4418 18.7007 10.4332 17.3483 10.7723 16.0629C11.1114 14.7776 11.786 13.6055 12.7271 12.6666C13.6682 11.7277 14.8419 11.0558 16.128 10.7197L16.3305 10.6695L16.4122 10.6552Z"
+          fill="#A7FC00"
+        />
+        <path
+          d="M19.5 11.625V15.75C19.5 15.9489 19.579 16.1397 19.7197 16.2803C19.8603 16.421 20.0511 16.5 20.25 16.5H24.375C24.4949 16.5 24.613 16.4712 24.7195 16.4161C24.8259 16.361 24.9176 16.2812 24.9869 16.1834C25.0562 16.0855 25.101 15.9725 25.1176 15.8538C25.1342 15.735 25.1221 15.6141 25.0823 15.501C24.7098 14.443 24.1047 13.482 23.3116 12.6888C22.5186 11.8956 21.5577 11.2904 20.4998 10.9177C20.3866 10.8778 20.2656 10.8656 20.1467 10.8821C20.0279 10.8986 19.9148 10.9434 19.8169 11.0127C19.7189 11.0819 19.639 11.1737 19.5839 11.2803C19.5288 11.3868 19.5 11.505 19.5 11.625Z"
+          fill="#A7FC00"
+        />
+      </svg>
+    ),
     progress: 25,
   },
 ];
 
 const Card: React.FC = () => {
-    return (
-      <div className="flex items-center gap-4 w-full slide-up my-10 ">
-        <div className="flex items-center justify-center flex-wrap gap-4 max-w-[478px] w-full ">
-          {cardData.map((card, index) => (
-            <div
-              key={index}
-              className={`w-[231px] ${
-                card.progress ? "h-[135px]" : "h-[135px]"
-              } px-5 py-4 bg-[#181818] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] flex-col justify-start items-start  inline-flex overflow-hidden`}
-            >
-              <div className="self-stretch justify-between items-center inline-flex">
-                <div className="text-center text-white text-[16px] font-normal py-2">
-                  {card.title}
-                </div>
-                <div className="w-9 h-9 bg-[#1b2a00] rounded-lg justify-center items-center flex">
-                  {card.icon}
-                </div>
+  return (
+    <div className="flex items-center gap-4 w-full slide-up my-10 ">
+      <div className="flex items-center justify-center flex-wrap gap-4 max-w-[478px] w-full ">
+        {cardData.map((card, index) => (
+          <div
+            key={index}
+            className={`w-[231px] ${
+              card.progress ? "h-[135px]" : "h-[135px]"
+            } px-5 py-4 bg-[#181818] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] flex-col justify-start items-start  inline-flex overflow-hidden`}
+          >
+            <div className="self-stretch justify-between items-center inline-flex">
+              <div className="text-center text-white text-[16px] font-[300] py-2">
+                {card.title}
               </div>
-              <div
-                className={`${
-                  index === 3
-                    ? "text-[24px] mt-3"
-                    : "text-[28px] mt-[30px] mb-3"
-                } text-center text-white  font-medium`}
-              >
-                {card.count}
+              <div className="w-9 h-9 bg-[#1b2a00] rounded-lg justify-center items-center flex">
+                {card.icon}
               </div>
-              {index == 3 && <ProgressBar progress={20} />}
             </div>
-          ))}
-        </div>
-
-        <div className="w-full h-full">
-          <FundraisingChart />
-          {/* <FundsDashboard /> */}
-        </div>
+            <div
+              className={`${
+                index === 3 ? "text-[24px] mt-3" : "text-[28px] mt-[30px] mb-3"
+              } text-center text-white  font-[400]`}
+            >
+              {card.count}
+            </div>
+            {index == 3 && <ProgressBar progress={20} />}
+          </div>
+        ))}
       </div>
-    );
+
+      <div className="w-full h-full">
+        <FundraisingChart />
+        {/* <FundsDashboard /> */}
+      </div>
+    </div>
+  );
 };
 
 export default Card;

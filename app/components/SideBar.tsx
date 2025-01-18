@@ -109,7 +109,7 @@ const Sidebar = ({ children }: SidebarProps) => {
             {menuItems.map((item) => (
               <div
                 key={item.name}
-                className={`flex items-center py-3 px-4 cursor-pointer font-normal group ${
+                className={`flex items-center py-3 px-4 cursor-pointer font-[300] group ${
                   path === item.route
                     ? "bg-[#212121] text-white border-l-[3px] border-[#a7fc00]"
                     : "hover:bg-[#1e1e1e] hover:scale-105 hover:opacity-90 transition-all ease-in-out duration-200 hover:text-white"
@@ -138,7 +138,7 @@ const Sidebar = ({ children }: SidebarProps) => {
                     </>
                   )}
                 </span>
-                <span className="text-base font-medium ">{item.name}</span>
+                <span className="text-base font-[400] ">{item.name}</span>
               </div>
             ))}
           </div>
@@ -150,14 +150,14 @@ const Sidebar = ({ children }: SidebarProps) => {
               onClick={() => router.push("/dashboard/support")}
             >
               <SupportIcon />
-              <span className="text-base font-medium">Support</span>
+              <span className="text-base font-[400]">Support</span>
             </div>
             <div
               className="flex items-center py-3 px-4 gap-4 rounded-lg cursor-pointer hover:bg-[#1e1e1e]"
               onClick={() => router.push("/logout")}
             >
               <LogoutIcon />
-              <span className="text-base font-medium">Logout</span>
+              <span className="text-base font-[400]">Logout</span>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@ const Sidebar = ({ children }: SidebarProps) => {
           <input
             type="text"
             placeholder="Search"
-            className="w-full h-full bg-transparent text-[#838383] pr-3 text-base font-normal outline-none placeholder-[#838383]"
+            className="w-full h-full bg-transparent text-[#838383] pr-3 text-base font-[300] outline-none placeholder-[#838383]"
           />
         </div>
 

@@ -137,7 +137,6 @@ const FundraisingChart = () => {
     },
   };
 
-
   const handlePeriodChange = (period: string) => {
     setSelectedPeriod(period);
     setIsDropdownOpen(false); // Close dropdown after selection
@@ -146,7 +145,7 @@ const FundraisingChart = () => {
   return (
     <div className="w-full bg-[#181818] rounded-xl p-4">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-white font-normal">Funds raised</h2>
+        <h2 className="text-white font-[300]">Funds raised</h2>
         <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -204,7 +203,7 @@ const FundraisingChart = () => {
       </div>
 
       <div className="mb-[33px] flex gap-4 items-end justify-between">
-        <div className="text-[28px] font-medium text-white">$3,520.50</div>
+        <div className="text-[28px] font-[400] text-white">$3,520.50</div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-3 h-0.5 bg-[#683fea]" />
@@ -222,7 +221,7 @@ const FundraisingChart = () => {
       </div>
 
       <div className="h-[130px] w-full pl-4">
-        <Line data={data} options={options} className=" h-[120px]"/>
+        <Line data={data} options={options} className=" h-[120px]" />
       </div>
     </div>
   );
