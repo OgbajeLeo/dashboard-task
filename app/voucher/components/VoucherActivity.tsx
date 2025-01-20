@@ -118,7 +118,7 @@ const sampleActivities: VoucherActivity[] = [
 const VoucherActivity = () => {
   return (
     <div className="w-full p-5 bg-[#181818] rounded-xl mt-[18px] slide-up mb-20">
-      <div className="flex justify-between items-center mb-4 py-4 px-4">
+      <div className="flex justify-between items-center mb-5  px-4">
         <div className="text-white text-2xl font-[400]">Voucher activity</div>
         <div className="text-[#a7fc00] text-sm cursor-pointer">See all</div>
       </div>
@@ -127,22 +127,22 @@ const VoucherActivity = () => {
         <table className="min-w-full rounded-2xl">
           <thead>
             <tr>
-              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+              <th className="px-5 py-4 text-[#b3b4b3] text-[15px] font-[300] text-left">
                 Voucher number
               </th>
-              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+              <th className="px-5 py-4 text-[#b3b4b3] text-[15px] font-[300] text-left">
                 Date created
               </th>
-              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+              <th className="px-5 py-4 text-[#b3b4b3] text-[15px] font-[300] text-left">
                 Status
               </th>
-              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+              <th className="px-5 py-4 text-[#b3b4b3] text-[15px] font-[300] text-left">
                 Reach
               </th>
-              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+              <th className="px-5 py-4 text-[#b3b4b3] text-[15px] font-[300] text-left">
                 Impressions
               </th>
-              <th className="px-4 py-3 text-[#b3b4b3] text-[15px] font-[300] text-left">
+              <th className="px-5 py-4 text-[#b3b4b3] text-[15px] font-[300] text-left">
                 Investor count
               </th>
             </tr>

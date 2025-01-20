@@ -44,6 +44,7 @@ const FundraisingChart = () => {
         backgroundColor: "rgba(104, 63, 234, 0.2)",
         borderWidth: 1,
         tension: 0, // Making the line straight
+        pointRadius: 0,
       },
       {
         label: "Truffle Ski",
@@ -57,6 +58,7 @@ const FundraisingChart = () => {
         backgroundColor: "rgba(167, 252, 0, 0.2)",
         borderWidth: 1,
         tension: 0, // Making the line straight
+        pointRadius: 0,
       },
       {
         label: "Mawi",
@@ -70,6 +72,7 @@ const FundraisingChart = () => {
         backgroundColor: "rgba(252, 121, 0, 0.2)",
         borderWidth: 1,
         tension: 0, // Making the line straight
+        pointRadius: 0,
       },
     ],
   };
@@ -101,25 +104,32 @@ const FundraisingChart = () => {
         ticks: {
           color: "#a5a5a5",
           font: {
-            size: 14,
+            size: 12,
+            weight: 300,
           },
-          paddingLeft: 2,
+          paddingLeft: 20,
+        
         },
         grid: {
           display: false,
           drawBorder: false,
         },
+        // offset: true,
+        offsetGridLines: false, // Offset grid lines to the right
+        min: 0, // Set min to 0 (or adjust this based on your needs)
+        max: 3,
       },
       y: {
         ticks: {
           color: "#a5a5a5",
           font: {
             size: 14,
+            weight: 300,
           },
 
           stepSize: 500, // Increment by 1000 to skip fractional values
           callback: function (value: number | string) {
-            return +value % 1000 === 0 ? `${+value / 1000}k` : ""; // Show only whole numbers
+            return +value % 1000 === 0 ? `${+value / 1000}k        ` : ""; // Show only whole numbers
           },
         },
         grid: {
@@ -143,8 +153,8 @@ const FundraisingChart = () => {
   };
 
   return (
-    <div className="w-full bg-[#181818] rounded-xl p-4">
-      <div className="flex items-center justify-between mb-4">
+    <div className="w-full bg-[#181818] rounded-xl p-5 py-6">
+      <div className="flex items-center justify-between mb-[5px]">
         <h2 className="text-white font-[300]">Funds raised</h2>
         <div className="relative">
           <button
@@ -203,24 +213,28 @@ const FundraisingChart = () => {
       </div>
 
       <div className="mb-[33px] flex gap-4 items-end justify-between">
-        <div className="text-[28px] font-[400] text-white">$3,520.50</div>
+        <div className="text-[28px] font-[400] leading-[33.8px] text-white">$3,520.50</div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-3 h-0.5 bg-[#683fea]" />
-            <span className="text-[#cdcdcc] text-sm">Cityscape L...</span>
+            <span className="text-[#cdcdcc] text-sm leading-4">
+              Cityscape L...
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-0.5 bg-[#a7fc00]" />
-            <span className="text-[#cdcdcc] text-sm">Truffle Ski...</span>
+            <span className="text-[#cdcdcc] text-sm leading-4">
+              Truffle Ski...
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-0.5 bg-[#fc7900]" />
-            <span className="text-[#cdcdcc] text-sm">Mawi</span>
+            <span className="text-[#cdcdcc] text-sm leading-4">Mawi</span>
           </div>
         </div>
       </div>
 
-      <div className="h-[130px] w-full pl-4">
+      <div className="h-[130px] w-full">
         <Line data={data} options={options} className=" h-[120px]" />
       </div>
     </div>
