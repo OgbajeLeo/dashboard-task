@@ -50,7 +50,7 @@ const StatusBadge = ({ status }: { status: Status }) => {
 
   return (
     <div
-      className={`px-3 py-1 ${styles.bgColor} rounded-full border ${styles.borderColor} justify-center items-center gap-2 inline-flex`}
+      className={`px-3 py-2 ${styles.bgColor} rounded-full leading-[24px] border ${styles.borderColor} justify-center items-center gap-2 inline-flex`}
     >
       <div className={`${styles.textColor} text-sm font-[300]`}>
         {styles.label}
