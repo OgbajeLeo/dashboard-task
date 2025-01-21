@@ -158,7 +158,7 @@ const FundraisingChart = () => {
            lineWidth: (ctx: { tick: { value: number } }): number => {
       const value = ctx.tick.value;
       // Thicker line for dashed values
-      return [500, 1500, 2500].includes(value) ? 1 : 1.5;
+      return [500, 1500, 2500].includes(value) ? 1 : 1;
     },
     lineDash: (ctx: { tick: { value: number } }): number[] => {
       const value = ctx.tick.value;
