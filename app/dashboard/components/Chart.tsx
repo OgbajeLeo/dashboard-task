@@ -147,15 +147,23 @@ const FundraisingChart = () => {
             }
             return "rgba(255, 255, 255, 0.2)"; // Hide other lines
           },
+           borderColor: (ctx: { tick: { value: number } }) => {
+        const value = ctx.tick.value;
+        // Apply dashed border only for 500, 1500, 2500
+        if (value === 500 || value === 1500 || value === 2500) {
+          return "rgba(255, 200, 255, 0.06123232347554545)"; // Dotted line color
+        }
+        return "transparent"; // No border for other values
+      },
            lineWidth: (ctx: { tick: { value: number } }): number => {
       const value = ctx.tick.value;
       // Thicker line for dashed values
-      return [500, 1500, 2500].includes(value) ? 1 : 0.5;
+      return [500, 1500, 2500].includes(value) ? 1 : 2;
     },
     lineDash: (ctx: { tick: { value: number } }): number[] => {
       const value = ctx.tick.value;
       // Apply dash for 500, 1500, 2500
-      return [500, 1500, 2500].includes(value) ? [6, 6] : [1,0];
+      return [500, 1500, 2500].includes(value) ? [6, 6] : [];
     },
         },
       },
