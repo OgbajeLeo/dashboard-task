@@ -87,7 +87,7 @@ const FundraisingChart = () => {
         labels: {
           color: "#cdcdcc",
           font: {
-            size: 12,
+            size: 14,
           },
         },
       },
@@ -104,7 +104,7 @@ const FundraisingChart = () => {
         ticks: {
           color: "#a5a5a5",
           font: {
-            size: 12,
+            size: 14,
             weight: 300,
           },
           paddingLeft: 20,
@@ -121,10 +121,10 @@ const FundraisingChart = () => {
       },
       y: {
         beginAtZero:true,
-        // border:{
-        //   display:false,
-        //   dash: [6,6]
-        // },
+        border:{
+          display:false,
+          dash: [6,6]
+        },
         ticks: {
           color: "#a5a5a5",
           font: {
