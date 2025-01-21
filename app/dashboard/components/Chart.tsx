@@ -155,7 +155,7 @@ const FundraisingChart = () => {
     lineDash: (ctx: { tick: { value: number } }): number[] => {
       const value = ctx.tick.value;
       // Apply dash for 500, 1500, 2500
-      return [500, 1500, 2500].includes(value) ? [6, 6] : [];
+      return [500, 1500, 2500].includes(value) ? [6, 6] : [1,0];
     },
         },
       },
