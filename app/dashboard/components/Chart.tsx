@@ -182,7 +182,7 @@ const FundraisingChart = () => {
         <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="px-3 py-2 bg-[#2c2c2c] rounded-lg text-white text-sm flex items-center gap-2"
+            className="px-3 py-2 bg-[#2c2c2c] rounded-lg text-white text-[13px] flex items-center gap-2"
           >
             {selectedPeriod === "14d"
               ? "Last 14 days"
