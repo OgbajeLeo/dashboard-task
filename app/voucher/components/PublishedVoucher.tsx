@@ -110,7 +110,7 @@ const VoucherCard = ({ voucher }: { voucher: Voucher }) => {
 
       <div className="self-stretch justify-between items-start inline-flex">
         <button className="px-3 py-2 hover:scale-105 rounded-lg border border-[#4a4a4a] justify-end items-center gap-1.5 flex">
-          <div className="text-right text-white text-[13px] font-[400]">
+          <div className="text-right text-white text-[13px] font-[400] leading-[15.6px]">
             View details
           </div>
         </button>
