@@ -14,7 +14,7 @@ const Section1 = () => {
               Manage and track your vouchers
             </div>
           </div>
-          <button className="p-3 bg-white rounded-xl justify-center items-center gap-2 flex hover:scale-105">
+          <button className="h-[42px] w-[141px] bg-white rounded-xl justify-center items-center gap-2 flex hover:scale-105">
             <PlusIcon />
             <div className="text-[#030500] text-[15px] font-[400]">
               New voucher
