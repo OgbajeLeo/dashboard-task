@@ -121,10 +121,10 @@ const FundraisingChart = () => {
       },
       y: {
         beginAtZero:true,
-        border:{
-          display:false,
-          dash: [6,6]
-        },
+        // border:{
+        //   display:false,
+        //   dash: [6,6]
+        // },
         ticks: {
           color: "#a5a5a5",
           font: {
@@ -147,6 +147,16 @@ const FundraisingChart = () => {
             }
             return "rgba(255, 255, 255, 0.2)"; // Hide other lines
           },
+           lineWidth: (ctx: { tick: { value: number } }): number => {
+      const value = ctx.tick.value;
+      // Thicker line for dashed values
+      return [500, 1500, 2500].includes(value) ? 1 : 0;
+    },
+    lineDash: (ctx: { tick: { value: number } }): number[] => {
+      const value = ctx.tick.value;
+      // Apply dash for 500, 1500, 2500
+      return [500, 1500, 2500].includes(value) ? [6, 6] : [];
+    },
         },
       },
     },
