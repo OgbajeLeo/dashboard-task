@@ -120,6 +120,11 @@ const FundraisingChart = () => {
         max: 3,
       },
       y: {
+        beginAtZero:true,
+        border:{
+          display:false,
+          dash: [6,6]
+        },
         ticks: {
           color: "#a5a5a5",
           font: {
