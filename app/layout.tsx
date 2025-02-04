@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${figTree.variable} `}>
+      <body className={`${figTree.variable}`}>
         {children}
       </body>
     </html>
